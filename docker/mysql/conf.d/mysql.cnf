@@ -1,0 +1,19 @@
+[mysqld]
+skip-host-cache
+skip-name-resolve
+
+character-set-server = utf8mb4
+collation-server = utf8mb4_general_ci
+init-connect = SET NAMES utf8mb4
+skip-character-set-client-handshake
+innodb_large_prefix = ON
+innodb_file_format = Barracuda
+
+[client]
+default-character-set = utf8mb4
+
+[mysqldump]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
