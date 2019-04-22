@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Run application
 
-Things you may want to cover:
+```bash
+make docker_up
+```
 
-* Ruby version
+## Demo user
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| email | password |
+----|----
+| demo@xxx.com | demodemo |
