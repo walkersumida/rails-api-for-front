@@ -1,0 +1,2 @@
+#!/bin/bash
+docker-compose exec -T rails_api bundle exec rubocop $@
