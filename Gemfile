@@ -34,6 +34,11 @@ group :development, :test do
 
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+
+  gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot_rails'
+  gem 'rspec-request_describer'
+  gem 'rspec-json_matcher'
 end
 
 group :development do
