@@ -37,6 +37,7 @@ group :development, :test do
 
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
+  gem 'database_cleaner'
   gem 'rspec-request_describer'
   gem 'rspec-json_matcher'
 end

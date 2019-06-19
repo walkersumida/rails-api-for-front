@@ -55,6 +55,8 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    database_cleaner (1.7.0)
+    database_rewinder (0.9.1)
     debug_inspector (0.0.3)
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -219,6 +221,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
+  database_cleaner
+  database_rewinder
   devise_token_auth
   factory_bot_rails
   jbuilder (~> 2.5)
