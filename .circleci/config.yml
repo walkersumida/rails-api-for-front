@@ -37,6 +37,10 @@ jobs:
                                                                   --out /tmp/test-results/rspec.xml \
                                                                   $TEST_FILES
       - run:
+          name: rubocop
+          command: |
+            docker-compose exec rails_api bin/bundle exec rubocop
+      - run:
           name: docker-compose down
           command: docker-compose down
 
