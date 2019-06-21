@@ -56,7 +56,6 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     database_cleaner (1.7.0)
-    database_rewinder (0.9.1)
     debug_inspector (0.0.3)
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -177,6 +176,8 @@ GEM
     rspec-request_describer (0.3.1)
       actionpack (>= 5.0.0)
     rspec-support (3.8.2)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (0.58.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -222,7 +223,6 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   database_cleaner
-  database_rewinder
   devise_token_auth
   factory_bot_rails
   jbuilder (~> 2.5)
@@ -236,6 +236,7 @@ DEPENDENCIES
   rspec-json_matcher
   rspec-rails (~> 3.8)
   rspec-request_describer
+  rspec_junit_formatter
   rubocop-airbnb
   spring
   spring-watcher-listen (~> 2.0.0)

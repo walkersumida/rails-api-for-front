@@ -40,6 +40,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-request_describer'
   gem 'rspec-json_matcher'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do
