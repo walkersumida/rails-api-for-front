@@ -3,9 +3,9 @@ module Requests
   module AuthHelpers
     module Extensions
       def sign_in(user)
-        let(:auth_helpers_auth_token) {
-          self.public_send(user).create_new_auth_token
-        }
+        let(:auth_helpers_auth_token) do
+          public_send(user).create_new_auth_token
+        end
       end
     end
 
