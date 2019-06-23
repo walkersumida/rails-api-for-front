@@ -4,6 +4,7 @@ RSpec.describe 'GET /posts/:id', type: :request do
   let(:id) { post.id }
   let(:user) { create(:user) }
   let(:post) { create(:post, user_id: user.id) }
+
   sign_in(:user)
 
   it 'get posts' do
@@ -17,7 +18,7 @@ RSpec.describe 'GET /posts/:id', type: :request do
         body: post.body,
         status: post.status,
         created_at: post.created_at,
-        updated_at: post.updated_at
+        updated_at: post.updated_at,
       }
     )
   end
