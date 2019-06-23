@@ -3,12 +3,10 @@ class PostsController < AuthenticatedController
 
   def index
     @posts = current_user.posts
-
-    render json: @posts
   end
 
   def show
-    render json: @post
+    # noop
   end
 
   def create

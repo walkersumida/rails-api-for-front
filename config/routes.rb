@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts
+  format = { format: 'json' }
+
+  resources :posts, defaults: format
   mount_devise_token_auth_for 'User', at: 'auth'
   # TODO: root url
   # root to: 'home#index'
