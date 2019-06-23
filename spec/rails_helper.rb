@@ -60,6 +60,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include FactoryBot::Syntax::Methods
+  config.include RSpec::JsonMatcher
   config.include RSpec::RequestDescriber, type: :request
   config.include Requests::AuthHelpers::Includables, type: :request
   config.extend Requests::AuthHelpers::Extensions, type: :request
