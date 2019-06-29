@@ -3,19 +3,17 @@ class PostsController < AuthenticatedController
 
   def index
     @posts = current_user.posts
-
-    render json: @posts
   end
 
   def show
-    render json: @post
+    # noop
   end
 
   def create
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render :show, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -23,7 +21,7 @@ class PostsController < AuthenticatedController
 
   def update
     if @post.update(post_params)
-      render json: @post
+      render :show
     else
       render json: @post.errors, status: :unprocessable_entity
     end
