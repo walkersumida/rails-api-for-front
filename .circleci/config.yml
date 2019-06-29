@@ -28,6 +28,11 @@ jobs:
             set -x
             docker-compose up -d
       - run:
+          name: bundle install
+          command: |
+            set -x
+            docker-compose exec rails_api bin/bundle install --path=vendor/bundle
+      - run:
           name: test
           command: |
             mkdir /tmp/test-results
