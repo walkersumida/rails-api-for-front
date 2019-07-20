@@ -8,4 +8,10 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   has_many :posts
+
+  before_validation :generate_uuid
+
+  def generate_uuid
+    self.uuid ||= SecureRandom.uuid
+  end
 end
