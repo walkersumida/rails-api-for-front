@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
-  factory :login_user, class: User do
+  factory :login_user, class: 'User' do
     uuid { SecureRandom.uuid }
     uid { generate(:uuid) }
     email { 'demo@xxx.com' }
