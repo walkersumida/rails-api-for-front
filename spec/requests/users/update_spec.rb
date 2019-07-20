@@ -21,7 +21,7 @@ RSpec.describe 'PATCH /users/:uuid', type: :request do
     expect(response.body).to be_json_as(
       {
         id: user.uuid,
-        nickname: updated_nickname
+        nickname: updated_nickname,
       }
     )
   end
