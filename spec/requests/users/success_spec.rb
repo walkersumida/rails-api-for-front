@@ -28,4 +28,3 @@ RSpec.describe 'POST /auth/sign_in', type: :request do
     )
   end
 end
-
