@@ -59,9 +59,17 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  config.include ActiveSupport::Testing::TimeHelpers
   config.include FactoryBot::Syntax::Methods
   config.include RSpec::JsonMatcher
   config.include RSpec::RequestDescriber, type: :request
   config.include Requests::AuthHelpers::Includables, type: :request
   config.extend Requests::AuthHelpers::Extensions, type: :request
+
+  config.before :each do
+    freeze_time
+  end
+  config.after :each do
+    travel_back
+  end
 end
