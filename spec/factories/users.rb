@@ -1,10 +1,19 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
-  factory :user do
+  factory :login_user, class: 'User' do
+    uuid { SecureRandom.uuid }
     uid { generate(:uuid) }
-    email { generate(:email) }
+    email { 'demo@xxx.com' }
     name { generate(:name) }
-    password { '12345678' }
+    password { 'demodemo' }
     confirmed_at { Time.now }
     confirmation_token { nil }
+
+    factory :user do
+      uid { generate(:uuid) }
+      email { generate(:email) }
+      name { generate(:name) }
+    end
   end
 end

@@ -7,5 +7,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
+
+  before_validation :generate_uuid
+
+  def generate_uuid
+    self.uuid ||= SecureRandom.uuid
+  end
 end
