@@ -58,3 +58,5 @@ gem 'devise_token_auth', '~> 1.1.2'
 gem 'rubocop-airbnb'
 
 gem 'rack-cors', :require => 'rack/cors'
+
+gem 'carrierwave', '~> 2.0'
