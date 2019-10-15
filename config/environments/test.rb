@@ -46,9 +46,7 @@ Rails.application.configure do
 end
 
 # carrierwave gem
-if Rails.env.test? || Rails.env.cucumber?
-  CarrierWave.configure do |config|
-    config.storage = :file
-    config.enable_processing = false
-  end
+CarrierWave.configure do |config|
+  config.storage = :file
+  config.enable_processing = false
 end
