@@ -24,7 +24,7 @@ RSpec.describe 'PATCH /users/:uuid', type: :request do
         email: user.email,
         name: user.name,
         nickname: updated_nickname,
-        image: user.image,
+        image: { url: nil },
       }
     )
   end
