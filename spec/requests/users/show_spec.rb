@@ -17,7 +17,7 @@ RSpec.describe 'GET /users/:uuid', type: :request do
           email: user.email,
           name: user.name,
           nickname: user.nickname,
-          image: user.image,
+          image: { url: nil },
         }
       )
     end
@@ -35,7 +35,7 @@ RSpec.describe 'GET /users/:uuid', type: :request do
           email: user.email,
           name: user.name,
           nickname: user.nickname,
-          image: user.image,
+          image: { url: nil },
         }
       )
     end
