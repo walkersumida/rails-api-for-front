@@ -23,7 +23,7 @@ RSpec.describe 'POST /auth/sign_in', type: :request do
         email: user.email,
         name: user.name,
         nickname: user.nickname,
-        image: user.image,
+        image: { url: nil },
       }
     )
   end

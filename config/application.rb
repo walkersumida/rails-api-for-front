@@ -41,5 +41,7 @@ module RailsApiForNuxtjs
                  methods: [:get, :post, :options, :delete, :put, :patch]
       end
     end
+
+    config.autoload_paths += %W(#{config.root}/app/services)
   end
 end

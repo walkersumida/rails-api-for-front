@@ -25,4 +25,7 @@
 # Ignore bundler directory
 vendor/bundle
 
+# Ignore upload directory
+public/uploads/*
+
 .DS_Store
