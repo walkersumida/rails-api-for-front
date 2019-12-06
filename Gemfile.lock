@@ -85,7 +85,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise_token_auth (1.1.2)
+    devise_token_auth (1.1.3)
       bcrypt (~> 3.0)
       devise (> 3.5.2, < 5)
       rails (>= 4.2.0, < 6.1)
@@ -259,7 +259,7 @@ DEPENDENCIES
   byebug
   carrierwave (~> 2.0)
   database_cleaner
-  devise_token_auth (~> 1.1.2)
+  devise_token_auth (~> 1.1.3)
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
