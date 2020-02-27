@@ -11,4 +11,6 @@ AllCops:
     - 'spec/spec_helper.rb'
     - 'db/schema.rb'
     - 'db/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
     - 'vendor/**/*'
