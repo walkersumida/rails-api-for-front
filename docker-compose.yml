@@ -12,6 +12,10 @@ services:
     volumes:
       - .:/app:cached
       - bundle:/usr/local/bundle:cached
+      - temp:/app/vendor
+      - temp:/app/tmp
+      - temp:/app/log
+      - temp:/app/.git
     environment:
       - DB_USERNAME=root
       - DB_PASSWORD=root
@@ -32,4 +36,5 @@ services:
 volumes:
   bundle:
     driver: local
+  temp:
   mysql-data:
