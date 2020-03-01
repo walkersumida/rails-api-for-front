@@ -10,7 +10,12 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/app
+      - .:/app:cached
+      - bundle:/usr/local/bundle:cached
+      - temp:/app/vendor
+      - temp:/app/tmp
+      - temp:/app/log
+      - temp:/app/.git
     environment:
       - DB_USERNAME=root
       - DB_PASSWORD=root
@@ -29,4 +34,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
 volumes:
+  bundle:
+    driver: local
+  temp:
   mysql-data:
