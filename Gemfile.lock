@@ -145,7 +145,7 @@ GEM
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
     public_suffix (4.0.1)
-    puma (4.3.1)
+    puma (4.3.2)
       nio4r (~> 2.0)
     rack (2.0.8)
     rack-cors (1.0.5)
@@ -266,7 +266,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   pry-byebug
   pry-stack_explorer
-  puma (~> 4.1)
+  puma (~> 4.3)
   rack-cors
   rails (~> 6.0.1)
   rspec-json_matcher
