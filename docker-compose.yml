@@ -35,6 +35,5 @@ services:
 
 volumes:
   bundle:
-    driver: local
   temp:
   mysql-data:
