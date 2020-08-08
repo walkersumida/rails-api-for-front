@@ -1,6 +1,6 @@
 # README
 
-[![CircleCI](https://circleci.com/gh/walkersumida/rails-api-for-nuxtjs.svg?style=svg)](https://circleci.com/gh/walkersumida/rails-api-for-nuxtjs)
+[![CircleCI](https://circleci.com/gh/walkersumida/rails-api-for-front.svg?style=svg)](https://circleci.com/gh/walkersumida/rails-api-for-front)
 
 ## Run application
 
