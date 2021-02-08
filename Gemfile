@@ -59,4 +59,4 @@ gem 'rubocop-airbnb'
 
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
