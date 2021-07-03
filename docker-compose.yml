@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    entrypoint: sh /app/docker/bin/wait_for_mysql.sh sh /app/docker/bin/rails_start.sh
+    entrypoint: sh /app/docker/bin/rails_start.sh
     ports:
       - 3000:3000
     volumes:
@@ -16,23 +16,24 @@ services:
       - temp:/app/tmp
       - temp:/app/.git
     environment:
-      - DB_USERNAME=root
-      - DB_PASSWORD=root
-      - DB_HOST=mysql
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - DB_HOST=postgres
       - DOCKER_HOST=0.0.0.0
     depends_on:
-      - mysql
-  mysql:
-    image: mysql:5.7
+      - postgres
+  postgres:
+    image: postgres:13.3
     ports:
-      - 3306:3306
+      - 5432:5432
     volumes:
-      - ./docker/mysql/conf.d:/etc/mysql/conf.d
-      - mysql-data:/var/lib/mysql
+      - postgres-data:/var/lib/postgres
     environment:
-      MYSQL_ROOT_PASSWORD: root
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
 
 volumes:
   bundle:
   temp:
-  mysql-data:
+  postgres-data:
